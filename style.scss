@@ -63,6 +63,7 @@ body {
           padding-top: 5px;
         }
         &-illustration {
+          margin-top: 25px;
           display: flex;
           width: 100%;
           justify-content: flex-end;
@@ -86,5 +87,47 @@ body {
   }
   .blue {
     border-top: 5px solid $blue;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 80%;
+    max-width: 700px;
+    .hero {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1100px;
+    width: 75%;
+    .hero {
+      p {
+        padding: 0 275px;
+      }
+    }
+    .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .col {
+        margin: 0 5px;
+        height: 60vh;
+        width: 30%;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card {
+        height: 190px;
+        margin: 10px 0px;
+      }
+    }
   }
 }
