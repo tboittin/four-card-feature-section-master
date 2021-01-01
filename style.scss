@@ -1,3 +1,5 @@
+@import "./reset.scss";
+
 $red: hsl(0, 78%, 62%);
 $cyan: hsl(180, 62%, 55%);
 $orange: hsl(34, 97%, 64%);
@@ -9,10 +11,80 @@ $light-blue: hsl(0, 0%, 98%);
 
 html {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: $gray-blue;
 }
 
 body {
   background-color: $light-blue;
+  display: flex;
+  justify-content: center;
 }
 
+.wrapper {
+  width: 90%;
+  max-width: 342px;
+  .hero {
+    padding: 0 10px;
+    margin: 75px 0px;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: $dark-blue;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .cards {
+    margin-bottom: 100px;
+    .card {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: lightgray 0px 10px 15px 2px;
+      text-align: left;
+      padding: 10px 30px;
+      margin: 30px 0px;
+
+      &-header {
+        margin-top: 10px;
+        h2 {
+          color: $dark-blue;
+          font-weight: 600;
+          font-size: 1.4rem;
+        }
+      }
+
+      &-body {
+        &-description {
+          font-size: 0.9rem;
+          padding-top: 5px;
+        }
+        &-illustration {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          padding: 10px 0px;
+          img {
+            width: 55px;
+          }
+        }
+      }
+    }
+  }
+
+  .cyan {
+    border-top: 5px solid $cyan;
+  }
+  .red {
+    border-top: 5px solid $red;
+  }
+  .orange {
+    border-top: 5px solid $orange;
+  }
+  .blue {
+    border-top: 5px solid $blue;
+  }
+}
