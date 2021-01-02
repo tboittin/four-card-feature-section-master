@@ -32,7 +32,16 @@ body {
   font-weight: 600;
 }
 .wrapper .cards {
+  width: 100%;
+  height: auto;
   margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 320px));
+  grid-template-rows: repeat(auto-fill, minmax(1fr, 200px));
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper .cards .card {
   background-color: white;
@@ -40,7 +49,6 @@ body {
   box-shadow: lightgray 0px 10px 15px 2px;
   text-align: left;
   padding: 10px 30px;
-  margin: 30px 0px;
 }
 .wrapper .cards .card-header {
   margin-top: 10px;
@@ -85,6 +93,10 @@ body {
   .wrapper .hero h1 {
     font-size: 2rem;
   }
+  .wrapper .cards {
+    row-gap: 30px;
+    column-gap: 30px;
+  }
 }
 @media (min-width: 1440px) {
   .wrapper {
@@ -95,9 +107,8 @@ body {
     padding: 0 275px;
   }
   .wrapper .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    row-gap: 10px;
+    column-gap: 30px;
   }
   .wrapper .cards .col {
     margin: 0 5px;
@@ -111,6 +122,24 @@ body {
   .wrapper .cards .card {
     height: 190px;
     margin: 10px 0px;
+  }
+  .wrapper .cyan {
+    grid-column: 1/span 1;
+    grid-row: 2/span 2;
+  }
+  .wrapper .red {
+    grid-column: 2/span 1;
+    grid-row: 1/span 2;
+    align-self: flex-end;
+  }
+  .wrapper .orange {
+    grid-column: 2/span 1;
+    grid-row: 3/span 2;
+    align-self: flex-start;
+  }
+  .wrapper .blue {
+    grid-column: 3/span 1;
+    grid-row: 2/span 2;
   }
 }
 

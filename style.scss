@@ -39,14 +39,22 @@ body {
   }
 
   .cards {
+    width: 100%;
+    height: auto;
     margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 320px));
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 200px));
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
     .card {
       background-color: white;
       border-radius: 5px;
       box-shadow: lightgray 0px 10px 15px 2px;
       text-align: left;
       padding: 10px 30px;
-      margin: 30px 0px;
 
       &-header {
         margin-top: 10px;
@@ -99,6 +107,10 @@ body {
         font-size: 2rem;
       }
     }
+    .cards {
+      row-gap: 30px;
+      column-gap: 30px;
+    }
   }
 }
 
@@ -112,9 +124,8 @@ body {
       }
     }
     .cards {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+      row-gap: 10px;
+      column-gap: 30px;
       .col {
         margin: 0 5px;
         height: 60vh;
@@ -128,6 +139,25 @@ body {
         height: 190px;
         margin: 10px 0px;
       }
+    }
+
+    .cyan {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 2;
+    }
+    .red {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      align-self: flex-end;
+    }
+    .orange {
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 2;
+      align-self: flex-start;
+    }
+    .blue {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 2;
     }
   }
 }
